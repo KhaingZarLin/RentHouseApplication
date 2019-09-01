@@ -27,14 +27,10 @@ public class MainActivity extends BaseActivity {
         BottomNavigationView bottomNavigationView=findViewById(R.id.btn_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(navlister);
         goToFragment(new ForUFragment());
-
-
-
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navlister=new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Fragment selectedFragment=null;
             switch (menuItem.getItemId())
             {
                 case R.id.foru:
