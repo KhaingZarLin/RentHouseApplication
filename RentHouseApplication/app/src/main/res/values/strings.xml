@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">RentHouseApplication</string>
+    <string name="type">Type Your Location,address</string>
+    <string name="top">Top Collection</string>
+    <string name="near">Near Me</string>
+    <string name="lowprice">Lower to Hight Price</string>
+    <string name="dollor">$12000</string>
+    <string name="west">West minster,London</string>
+    <string name="area">3200 sqft</string>
+    <string name="room">4 bedrooms</string>
+    <string name="foru">For you</string>
+    <string name="showmore">Show More</string>
+    <string name="favourite">Favourite</string>
+    <string name="drive">Doft Driver</string>
+    <string name="profile">Profile</string>
+    <string name="more">More</string>
+    <string name="location">West minster,London</string>
+    <string name="fav_no">324 Favourite</string>
+    <string name="review">23 Reviews</string>
+    <string name="seerv">See Review</string>
+    <string name="seeph">See Photos</string>
+    <string name="singlefam">Single Family House</string>
+    <string name="paragrah">Android allows us to create shapes using shape drawable. The basic shapes supported in shape drawables are Line, Oval, Rectangle and Ring. This tutorial focuses on how to create circle shape. The drawable created using android shapes are scalable and highly maintainable compared to pre graphics bundled with APK.Jul 14, 2015</string>
+    <string name="add_fav">Add Favourite</string>
+    <string name="bknw">Book Now</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
