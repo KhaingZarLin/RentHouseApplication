@@ -12,6 +12,7 @@
                 android:radius="0dp"
                 android:topLeftRadius="50dp"
                 android:topRightRadius="50dp"/>
+            <solid android:color="@color/white"/>
             <stroke
                 android:color="#968585"
                 android:width="1dp"/>

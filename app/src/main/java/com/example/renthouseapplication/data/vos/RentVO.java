@@ -17,7 +17,7 @@ public class RentVO {
     private String description;
 
     @SerializedName("price")
-    private double price;
+    private long price;
 
     @SerializedName("address")
     private String address;
@@ -25,11 +25,11 @@ public class RentVO {
     @SerializedName("square_feet")
     private long square_feet;
 
-    public double getPrice() {
+    public long getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(long price) {
         this.price = price;
     }
 

@@ -1,0 +1,40 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="margin_1">2dp</dimen>
+    <dimen name="margin_2">4dp</dimen>
+    <dimen name="margin_3">8dp</dimen>
+    <dimen name="margin_4">16dp</dimen>
+    <dimen name="margin_5">24dp</dimen>
+    <dimen name="margin_6">32dp</dimen>
+    <dimen name="margin_7">50dp</dimen>
+    <dimen name="margin_8">80dp</dimen>
+    <dimen name="margin_9">100dp</dimen>
+
+    <dimen name="text_1">15sp</dimen>
+    <dimen name="text_2">17sp</dimen>
+    <dimen name="text_3">20sp</dimen>
+
+    <dimen name="width_1">20dp</dimen>
+    <dimen name="width_2">30dp</dimen>
+    <dimen name="width_3">40dp</dimen>
+    <dimen name="width_4">100dp</dimen>
+    <dimen name="width_5">120dp</dimen>
+    <dimen name="width_6">150dp</dimen>
+
+    <dimen name="width">60dp</dimen>
+
+    <dimen name="height_1">20dp</dimen>
+    <dimen name="height_2">30dp</dimen>
+    <dimen name="height_3">40dp</dimen>
+    <dimen name="height_4">140dp</dimen>
+    <dimen name="height_5">300dp</dimen>
+    <dimen name="height_6">600dp</dimen>
+
+    <dimen name="height">60dp</dimen>
+
+    <dimen name="toolbar_height">80dp</dimen>
+
+</resources>

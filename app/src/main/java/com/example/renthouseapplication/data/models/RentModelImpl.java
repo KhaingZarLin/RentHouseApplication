@@ -26,9 +26,7 @@ public class RentModelImpl extends BaseModel implements RentModel{
         return objInstance;
     }
 
-    public List<RentVO> getAllEvents(){
-        return null;
-    }
+
 
 
     @Override
@@ -48,5 +46,11 @@ public class RentModelImpl extends BaseModel implements RentModel{
                 delegate.onFailure(errorMessage);
             }
         });
+    }
+
+    @Override
+    public RentVO findRentById(int hotelId) {
+        RentVO rentVO = eventsDataRepository.get(hotelId);
+        return rentVO;
     }
 }

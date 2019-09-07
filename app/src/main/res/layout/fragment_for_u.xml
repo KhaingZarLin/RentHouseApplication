@@ -18,6 +18,9 @@
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
             <EditText
+                android:id="@+id/ed_search"
+                app:showAsAction="ifRoom|collapseActionView"
+                app:actionViewClass="android.widget.SearchView"
                 android:layout_weight="4"
                 android:textSize="10dp"
                 android:background="@drawable/search_background"

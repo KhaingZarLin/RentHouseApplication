@@ -1,5 +1,6 @@
 package com.example.renthouseapplication.view.holder;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -16,6 +17,7 @@ import butterknife.ButterKnife;
 
 public class TopCollectionViewHolder extends BaseViewHolder<RentVO>  {
     private FragmentDelegateOne fragmentDelegateOne;
+    public Context context;
 
     @BindView(R.id.imageView)
     ImageView imageView;
@@ -34,25 +36,26 @@ public class TopCollectionViewHolder extends BaseViewHolder<RentVO>  {
 
 
 
-    public TopCollectionViewHolder(View itemView, final FragmentDelegateOne delegateOne) {
+    public TopCollectionViewHolder(@NonNull View itemView,FragmentDelegateOne delegateOne) {
         super(itemView);
-        fragmentDelegateOne=delegateOne;
 
         ButterKnife.bind(this,itemView);
+        fragmentDelegateOne=delegateOne;
+
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                delegateOne.onTapDElegate();
+                fragmentDelegateOne.onTapDElegate(mData.getId());
             }
         });
     }
 
-
     @Override
-    public void bindData(RentVO mData) {
-        rate.setText(String.valueOf(mData.getPrice()));
-        hottelnaem.setText(mData.getName());
-        square.setText(String.valueOf(mData.getSquare_feet()));
-        Glide.with(itemView).load(mData.getImage()).into(imageView);
+    public void bindData(RentVO data) {
+        mData=data;
+        rate.setText("$"+String.valueOf(data.getPrice()));
+        hottelnaem.setText(data.getName());
+        square.setText(String.valueOf(data.getSquare_feet()));
+        Glide.with(itemView).load(data.getImage()).into(imageView);
     }
 }
