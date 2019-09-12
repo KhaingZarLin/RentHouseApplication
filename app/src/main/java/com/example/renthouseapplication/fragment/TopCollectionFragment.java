@@ -4,7 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -15,6 +18,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.renthouseapplication.R;
@@ -27,11 +33,22 @@ import com.example.renthouseapplication.delegate.FragmentDelegateOne;
 
 import java.util.List;
 
+import butterknife.BindView;
+
 
 public class TopCollectionFragment extends Fragment implements FragmentDelegateOne  {
-    RecyclerView recyclerView;
     LinearLayoutManager linearLayoutManager;
     private FragmentDelegateOne fragmentDelegateOne;
+
+
+    @BindView(R.id.ed_search)
+    EditText search_et;
+
+    @BindView(R.id.linearlayout)
+    ImageView linearView;
+
+    @BindView(R.id.grid)
+    ImageView gridView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +57,13 @@ public class TopCollectionFragment extends Fragment implements FragmentDelegateO
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_top_collection, container, false);
-        recyclerView=view.findViewById(R.id.recyclerview);
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        final RecyclerView  recyclerView=view.findViewById(R.id.recyclerview);
         linearLayoutManager=new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
 
@@ -59,11 +82,20 @@ public class TopCollectionFragment extends Fragment implements FragmentDelegateO
             }
         });
 
+       /* fragmentDelegateOne.onLayoutChange(new LayoutManagerDelegate() {
+            @Override
+            public void onChangeToLinearLayout() {
+                recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayout.VERTICAL, false));
+            }
+
+            @Override
+            public void onChangeToGridLayout() {
+                recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 2));
+            }
+        });*/
 
 
-        return view;
     }
-
 
     @Override
     public void onTapDElegate(int holdId) {
@@ -71,6 +103,20 @@ public class TopCollectionFragment extends Fragment implements FragmentDelegateO
         startActivity(intent);
     }
 
+    @Override
+    public void onLayoutChange(final LayoutManagerDelegate layoutManagerDelegate) {
+        linearView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                layoutManagerDelegate.onChangeToLinearLayout();
+            }
+        });
 
-
+        gridView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                layoutManagerDelegate.onChangeToGridLayout();
+            }
+        });
     }
+}

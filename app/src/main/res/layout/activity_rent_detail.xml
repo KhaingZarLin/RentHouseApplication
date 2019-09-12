@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RentDetailActivity"
@@ -67,21 +72,19 @@
 
                  <LinearLayout
                      android:id="@+id/send"
-                     android:layout_alignParentStart="true"
-                     android:layout_marginStart="270dp"
+                     android:layout_marginStart="200dp"
                      android:background="@drawable/circle"
-                     android:layout_width="45dp"
-                     android:layout_height="45dp">
+                     android:layout_width="50dp"
+                     android:layout_height="50dp">
 
                      <android.support.design.widget.FloatingActionButton
                          android:id="@+id/map_fab"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:layout_alignParentStart="true"
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
                          android:layout_gravity="center"
-                         android:src="@drawable/ic_send_black_24dp"
+                         android:src="@drawable/images"
                          android:clickable="true"
-                        />
+                         />
 
                     <!-- <ImageView
                          android:layout_gravity="center"
@@ -243,5 +246,5 @@
                  android:layout_width="0dp"
                  android:layout_height="50dp" />
          </LinearLayout>
-
 </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
